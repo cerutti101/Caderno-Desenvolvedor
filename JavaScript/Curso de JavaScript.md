@@ -4,7 +4,7 @@
 
 Declaração de variáveis e operadores aritméticos:
 
-     Antes de tudo, é importante entender como fazer com que o console aplique a informação que você que ele retorne.
+   Antes de tudo, é importante entender como fazer com que o console aplique a informação que você que ele retorne.
 
 Para isso existe o código:
 
@@ -12,13 +12,13 @@ Para isso existe o código:
 console.log('O texto que queremos')
 ```
 
-     Usamos a seguinte estrutura para declarar variáveis.
+   Usamos a seguinte estrutura para declarar variáveis.
 
 **Tipo da variável nome da variável = valor da variável**
 
-     (Por Js ser uma linguagem dinâmica, não é necessário declarar qual tipo de dado estamos guardando na variável)
+   (Por Js ser uma linguagem dinâmica, não é necessário declarar qual tipo de dado estamos guardando na variável)
 
-     Antes de definir as variáveis, primeiro definirei escopo:
+   Antes de definir as variáveis, primeiro definirei escopo:
 
 JS trabalha com a ideia de escopos (pequenos grupos de atuação) como, por exemplo, função( function exemplo() ), condicionais (ifs e elses) e estruturas de repetição (while, for) 
 
