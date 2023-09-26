@@ -1,3 +1,5 @@
+# Curso de JavaScript
+
 # Primeiros passos com JavaScript
 
 Declaração de variáveis e operadores aritméticos:
@@ -238,8 +240,6 @@ val1 === val2 // são estritamente iguais (idênticos)
 
    Foi realizado no javaScript/Desafio2.js 
 
-[Curso de JavaScript](https://www.notion.so/Curso-de-JavaScript-4285b16dc644458da604efa87593d75d?pvs=21)
-
 ### Operadores de String
 
   Uma grande questão do JavaScript, o concatenador  “+” ele permite construir strings composta por múltiplas strings menores ou unindo strings com outros tipos, exemplo:
@@ -369,8 +369,276 @@ switch(cor) {
 
 # Os ciclos
 
+   Em geral os ciclos servem para executar um bloco de codigos varias vezes.
+
+   Eles são uteis quando voce deseja executar o mesmo codigo repetidamente, adicionando um valor diferente a cada vez.
+
 ### O ciclo “FOR”
+
+   O ciclo “FOR” basico, é da seguinte maneira:
+
+   
+
+<aside>
+👉 **for** (**declaração1** ; **declaração2** ; **declaração3**) {
+//codigo que deve ser executado dentro do ciclo
+}
+
+</aside>
+
+   O processo interno é:
+
+- declaração1 - É executado antes do bloco começar (voce pode criar uma variavel).
+- declaração2 - Define a condição para executar o loop (o bloco de codigo).
+- declaração3 - É executado sempre apos a execução do loop(o bloco de codigo).
+
+   **Um exemplo é :**
+
+```jsx
+for (i=1; i<=5; i++) {
+   document.write(i + "<br />");
+}
+```
+
+**A Instrução 1 :** Define uma variável antes do início do loop (var i = 1).
+
+**A instrução 2 :** Define a condição para a execução do loop (deve ser menor ou igual a 5).
+
+<aside>
+👉 Se a **afirmação 2** retornar verdadeiro, o loop será reiniciado; se retornar falso, o loop terminará.
+
+A instrução 2 também é opcional, mas somente se você colocar uma **quebra** dentro do loop. Caso contrário, o ciclo nunca terminará!
+
+</aside>
+
+**A instrução 3 :** Aumenta um valor (i++) cada vez que o bloco de código no loop é executado.
+
+<aside>
+👉 A **instrução 3** é usada para alterar a variável inicial. Ele pode fazer qualquer coisa, incluindo incremento negativo (i--), incremento positivo (i = i + 15).
+
+### 
+
+</aside>
 
 ### O ciclo “ WHILE”
 
+   O loop **while** se repete por causa de uma afirmativa de true or false, ou seja o resultado da declaração de condição é sempre um valor booleano (verdadeiro ou falso)
+
+O loop **while** se repete através de um bloco de código, mas apenas enquanto uma condição especificada for **verdadeira** .
+
+<aside>
+👉 **while** (Condição){
+// codigo que deve ser usado no ciclo
+}
+
+</aside>
+
+Um exemplo de:
+
+```jsx
+var i=0;
+while (i<=10) {
+   document.write(i + "<br />");
+   i++;
+}
+```
+
+   O loop neste código continuará a ser executado enquanto i for menor ou igual a 10. E cada vez que o loop for executado, ele aumentará em 1.
+
+Isso produzirá valores de 0 a 10.
+
+<aside>
+⚠️ **Loops infinitos não são bons.** E uma maneira de isso acontecer é esquecermos de aumentar a variável usada na condição.
+
+</aside>
+
+### O ciclo Do…While
+
+   É uma variante do loop while, mas com uma diferença importante.
+
+   Este loop executará o bloco de código uma vez, **antes** de verificar se a condição é verdadeira, e então repetirá o ciclo enquanto a condição for **verdadeira**.
+
+   A **sintaxe:**
+
+<aside>
+👉 **DO** {
+
+//Bloco de codigo que sera executado.
+
+}
+
+**WHILE** (**condição**);
+
+</aside>
+
+   O exemplo é:
+
+```jsx
+var i=20;
+do {  
+  document.write(i + "<br />");
+  i++;  
+}
+while (i<=25);
+Clique para executar
+```
+
+<aside>
+⚠️ O loop sempre será executado **pelo menos uma vez** , mesmo que a condição seja falsa, porque o bloco de código é executado antes da condição ser testada.
+
+</aside>
+
 ### Os comandos “BREAK” e “CONTINUE”
+
+   O **************BREAK************** é usado pra “sair” de um loop e continuar executando o codigo apos o ciclo;
+
+   **Exemplo:**
+
+```jsx
+for (i = 0; i <= 10; i++) {
+   if (i == 5) {
+     break; 
+   }
+   document.write(i + "<br />");
+}
+```
+
+<aside>
+⚠️ Você pode usar a palavra-chave **RETURN** para retornar algum valor imediatamente do ciclo dentro de uma função. Isso também quebrará o ciclo.
+
+</aside>
+
+   O **CONTINUE** é usado para intorromper apenas uma interação no loop e continua com a proxima interação.
+
+   ****************EXEMPLO:****************
+
+```jsx
+for (i = 0; i <= 10; i++) {
+   if (i == 5) {
+      continue; 
+   }
+   document.write(i + "<br />");
+}
+```
+
+## Funções
+
+   Uma **função** JavaScript é um bloco de código projetado para executar uma tarefa específica.
+
+   As principais vantagens de usar funções:
+
+   **Reutilização** de código : defina o código uma vez e use-o várias vezes.
+
+   Use o mesmo código muitas vezes com **argumentos** diferentes , para produzir resultados diferentes.
+
+   O que é uma função? Um determinado bloco de codigo que pode ser reutilizado continuamente.
+
+A sintaxe é :
+
+<aside>
+👉 **FUNCTION** nome(){
+// Codigo que será reutilizado
+}
+
+</aside>
+
+   Os nomes das funções podem conter letras, dígitos, sublinhados e cifrões (mesmas regras das variáveis).
+
+   Para utilizar a **função** que voce criou, é da seguinte maneira:
+
+```jsx
+function funcao() {
+  alert("Chama a função");
+}
+
+funcao();
+```
+
+<aside>
+👉 Você também pode chamar uma função usando esta sintaxe: myFunction.call(). A diferença é que ao chamar dessa forma, você está passando a palavra-chave 'this' para uma função.
+
+</aside>
+
+### ****Parâmetros de Função****
+
+   Funções podem ou nao receber ************************Parametros************************ de função.
+
+   **********************Parametros********************** de função são declarados ao cliar a função entre os dois “()” posteriores ao nome.
+
+<aside>
+👉 **nomeFunção**(parametro1, parametro2, parametro3){
+// o codigo que deve ser executado
+}
+
+</aside>
+
+<aside>
+⚠️ Assim como acontece com as variáveis, os parâmetros devem receber **nomes** , que são **separados por vírgulas** entre parênteses.
+
+</aside>
+
+Exemplo :
+
+```jsx
+function sayMyName (nome) {
+ console.log(" Fala meu mano "+nome);
+}
+```
+
+   **Os argumentos** da função são os valores reais passados para (e recebidos pela) função.
+
+Exemplo de utilização:
+
+```jsx
+function sayMyName (nome){
+console.log("Fala meu mano "+ nome);
+}
+
+sayMyName("Tortinha de melão");
+sayMyName("Gostinho de fruta");
+sayMyName("Arlindo");
+```
+
+### ****Vários parâmetros****
+
+   Cada função pode receber a quantidade que necessita de variaveis, sendo assim, uma mesma função pode receber mais de um unico paramento como foi exemplificado acima.
+
+   Exemplo de função com dois parametros:
+
+```jsx
+function meuNome (pNome, uNome){
+ console.log( "Eu me chamo"+ pNome  +", mas meus consagrados me chamam de " +uNome
+}
+```
+
+<aside>
+⚠️     Se você passar **mais** **argumentos do que os definidos**, eles serão atribuídos a um array chamado **arguments**. 
+   Eles podem ser usados assim: **arguments**[0], **arguments**[1], etc.
+
+</aside>
+
+<aside>
+⚠️ Se uma função for chamada com argumentos **ausentes** (menos do que os declarados), os valores ausentes serão definidos como **undefined** , o que indica que não foi atribuído um valor a uma variável.
+
+</aside>
+
+### ****Retorno de função****
+
+   Você pode usar a instrução **RETURN** que tem como proposito retornar um valor apos processo.
+
+   Essa intrução é util por exemplo se voce precisa fazer calculos que requerem um resultado.
+
+Exemplo:
+
+```jsx
+function myFunction(a, b) {
+   return a * b;
+}
+
+var x = myFunction(5, 6);
+```
+
+<aside>
+⚠️ Se você não retornar nada de uma função, ela retornará **undefined** .
+
+</aside>
