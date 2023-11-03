@@ -1,57 +1,29 @@
 /*
-3) elabore um algoritmo que calcule o que deve ser pafo por um produto, considerando
- o preço normal de etiqueta e a escolha da condição de pagamento.
- Utilize os codigos da tabela a seguir para ler qual a condição de pagamento escolhida
- e efetuar o calculo adequado.
+Criando seus próprios objetos
+Bob foi contratado como oficial de informações do aeroporto e precisa gerar mensagens de status para cada voo․ Vamos ajudá-lo!
+Complete o programa determinado fixando o construtor, criando um objeto de voo e atribuindo-o a uma determinada variável para executar corretamente a mensagem correspondente.
+O ID do voo e o status do voo (pousado, pontual, atrasado, etc.) são considerados como entrada.
 
- Codigo Condição de pagamento:
- - A vista Debito, recebe 10% de desconto;
- - A vista no Dinheiro ou PIX, recebe 15% de desconto;
- - Em duas vezes, preço nornal de etiqueta sem juros;
- - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+Amostra de entrada
+NGT 929
+pousou
 
-    DIFERENCIAL : FUNÇÔES
- */
-    function adapMensagem(formaDePagamento,valor,modalidade){
+Amostra de saída
+do vôo NGT 929 pousou
+*/
 
+function main() {
+    //pega o numero do voo e seus status
+    var numeroVoo = 121;
+    var statusVoo = "ATRASADO";
+    var Voo1 = new Voo(numeroVoo,statusVoo);
+    
+    //output
+    console.log('O Voo ' + Voo1.number + ' está ' + Voo1.status)
+    
+}
 
-    }
-
-    function debito(formaDePagamento, valor, resultado){
-            if (formaDePagamento == "Cartão"){
-
-                resultado = valor - (valor * 0.1);
-                return resultado;
-
-            }else if((formaDePagamento == "Moeda")||(formaDePagamento == "Pix")){
-            
-                resultado = valor - (valor * 0.15);
-                return resultado;
-            
-        }
-    }
-
-    function credito(formaDePagamento, valor, resultado){
-            if((formaDePagamento == "Parcelado") && (quantiParcela <= 2)){
-
-            resultado = valor; 
-            return resultado;
-        
-        }else if((formaDePagamento == "Parcelado") && (quantiParcela > 2)){
-            
-            resultado = valor * 1.1;
-            return resultado;
-        }
-    }
-    function valorParcela(resultado,quantiParcela)
-
-    function main(){
-            var modalidade, resultado, formaDePagamento, valor, quantiParcela;
-            modalidade ="Credito" ;
-            formaDePagamento ="Parcelado" ;
-            valor = 535.60 ;
-            quantiParcela = 6 ;
-            
-
-            console.log(mensagem);
-    }
+function Voo(numeroVoo, status) {
+    this.number = numeroVoo;
+    this.status = status;
+};
